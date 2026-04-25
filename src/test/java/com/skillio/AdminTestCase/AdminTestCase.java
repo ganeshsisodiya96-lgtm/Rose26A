@@ -206,7 +206,7 @@ public class AdminTestCase  {
         // Fill Add User form using AddUserPage
         AddUserPage addUserPage = PageFactory.initElements(Keyword.threadLocal.get(), AddUserPage.class);
         addUserPage.selectUserRoleAdmin();
-        addUserPage.enterEmployeeNameAndSelect("manda akhil user");
+        addUserPage.enterEmployeeNameAndSelect("Alice akhil user");
         addUserPage.selectStatusEnabled();
         addUserPage.enterUsername("Admin777");
         addUserPage.enterPasswordAndConfirm("Admin@123");

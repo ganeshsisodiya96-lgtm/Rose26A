@@ -1,27 +1,43 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="5" passed="5" failed="0" skipped="0">
+<testng-results ignored="0" total="29" passed="8" failed="21" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2026-04-25T13:09:24 IST" name="Default suite" finished-at="2026-04-25T13:09:24 IST" duration-ms="389">
+  <suite started-at="2026-04-25T16:38:51 IST" name="Default suite" finished-at="2026-04-25T16:43:54 IST" duration-ms="303245">
     <groups>
       <group name="cucumber">
         <method signature="AbstractTestNGCucumberTests.runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.skillio.runner.Runner@37883b97]" name="runScenario" class="io.cucumber.testng.AbstractTestNGCucumberTests"/>
       </group> <!-- cucumber -->
     </groups>
-    <test started-at="2026-04-25T13:09:24 IST" name="Default test" finished-at="2026-04-25T13:09:24 IST" duration-ms="389">
+    <test started-at="2026-04-25T16:38:51 IST" name="Default test" finished-at="2026-04-25T16:43:54 IST" duration-ms="303245">
       <class name="com.skillio.runner.Runner">
-        <test-method is-config="true" signature="setUpClass(org.testng.ITestContext)[pri:0, instance:com.skillio.runner.Runner@37883b97]" started-at="2026-04-25T13:09:24 IST" name="setUpClass" finished-at="2026-04-25T13:09:24 IST" duration-ms="225" status="PASS">
+        <test-method is-config="true" signature="setUpClass(org.testng.ITestContext)[pri:0, instance:com.skillio.runner.Runner@37883b97]" started-at="2026-04-25T16:38:51 IST" name="setUpClass" finished-at="2026-04-25T16:38:51 IST" duration-ms="782" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[org.testng.TestRunner@3d3ba765]]>
+                <![CDATA[org.testng.TestRunner@370225c7]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUpClass -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.skillio.runner.Runner@37883b97]" started-at="2026-04-25T13:09:24 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-04-25T13:09:24 IST" duration-ms="104" status="PASS">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.skillio.runner.Runner@37883b97]" started-at="2026-04-25T16:38:51 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-04-25T16:39:05 IST" duration-ms="13663" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Successful login with valid credentials"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Login Scenarios OrangeHRM Login"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.skillio.runner.Runner@37883b97]" started-at="2026-04-25T16:39:05 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-04-25T16:39:13 IST" duration-ms="8243" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -37,7 +53,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.skillio.runner.Runner@37883b97]" started-at="2026-04-25T13:09:24 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-04-25T13:09:24 IST" duration-ms="7" status="PASS">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.skillio.runner.Runner@37883b97]" started-at="2026-04-25T16:39:13 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-04-25T16:39:30 IST" duration-ms="16504" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -53,7 +69,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.skillio.runner.Runner@37883b97]" started-at="2026-04-25T13:09:24 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-04-25T13:09:24 IST" duration-ms="2" status="PASS">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.skillio.runner.Runner@37883b97]" started-at="2026-04-25T16:39:30 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-04-25T16:39:41 IST" duration-ms="11532" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -69,7 +85,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.skillio.runner.Runner@37883b97]" started-at="2026-04-25T13:09:24 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-04-25T13:09:24 IST" duration-ms="2" status="PASS">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.skillio.runner.Runner@37883b97]" started-at="2026-04-25T16:39:41 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-04-25T16:39:49 IST" duration-ms="7306" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -85,7 +101,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.skillio.runner.Runner@37883b97]" started-at="2026-04-25T13:09:24 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-04-25T13:09:24 IST" duration-ms="2" status="PASS">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.skillio.runner.Runner@37883b97]" started-at="2026-04-25T16:39:49 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-04-25T16:40:33 IST" duration-ms="44039" status="FAIL">
           <params>
             <param index="0">
               <value>
@@ -98,10 +114,2162 @@
               </value>
             </param>
           </params>
+          <exception class="org.openqa.selenium.TimeoutException">
+            <message>
+              <![CDATA[Expected condition failed: waiting for visibility of Proxy element for: DefaultElementLocator 'By.cssSelector: p.oxd-alert-content-text'
+(tried for 30 seconds with 500 milliseconds interval)]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of Proxy element for: DefaultElementLocator 'By.cssSelector: p.oxd-alert-content-text'
+(tried for 30 seconds with 500 milliseconds interval)
+at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
+at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:231)
+at com.skillio.utils.WaitFor.elementToBeVisible(WaitFor.java:43)
+at com.skillio.pages.LoginPage.getLoginErrorMessage(LoginPage.java:66)
+at com.skillio.stepdefinitions.LoginSteps.the_login_result_should_be(LoginSteps.java:53)
+at ✽.the login result should be "failure"(file:///C:/Users/Lenovo/eclipse-workspace/Rose26A/src/test/resources/Admin.features/Login.feature:20)
+Caused by: org.openqa.selenium.NoSuchElementException: Unable to locate element: p.oxd-alert-content-text
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#nosuchelementexception
+Build info: version: '4.40.0', revision: 'b3333f1'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.8'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Command: [e66af824-2f85-4af7-a116-21b174bef90f, findElement {using=css selector, value=p.oxd-alert-content-text}]
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 150.0, moz:accessibilityChecks: false, moz:buildID: 20260415192539, moz:geckodriverVersion: 0.36.0, moz:headless: false, moz:platformVersion: 10.0, moz:processID: 22504, moz:profile: C:\Users\Lenovo\AppData\Loc..., moz:shutdownTimeout: 60000, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, userAgent: Mozilla/5.0 (Windows NT 10....}
+Session ID: e66af824-2f85-4af7-a116-21b174bef90f
+at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:169)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:142)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:223)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:601)
+at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:166)
+at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:60)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:424)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:418)
+at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
+at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+at jdk.proxy2/jdk.proxy2.$Proxy27.isDisplayed(Unknown Source)
+at org.openqa.selenium.support.ui.ExpectedConditions.elementIfVisible(ExpectedConditions.java:367)
+at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:353)
+at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:350)
+at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:207)
+... 4 more
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.TimeoutException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:com.skillio.runner.Runner@37883b97]" started-at="2026-04-25T13:09:24 IST" name="tearDownClass" finished-at="2026-04-25T13:09:24 IST" duration-ms="3" status="PASS">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.skillio.runner.Runner@37883b97]" started-at="2026-04-25T16:40:33 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-04-25T16:40:42 IST" duration-ms="8965" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Verify Dashboard page header"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["OrangeHRM Dashboard Functionality"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.skillio.runner.Runner@37883b97]" started-at="2026-04-25T16:40:42 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-04-25T16:40:58 IST" duration-ms="16359" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Verify Quick Launch widget visibility"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["OrangeHRM Dashboard Functionality"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.skillio.runner.Runner@37883b97]" started-at="2026-04-25T16:40:58 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-04-25T16:41:06 IST" duration-ms="8062" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Verify side menu search filters modules"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["OrangeHRM Dashboard Functionality"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.skillio.runner.Runner@37883b97]" started-at="2026-04-25T16:41:06 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-04-25T16:41:12 IST" duration-ms="5704" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["TC_LEAVE_01 - Employee can apply for annual leave"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Leave - Apply and Manage Leave"]]>
+              </value>
+            </param>
+          </params>
+          <exception class="io.cucumber.testng.UndefinedStepException">
+            <message>
+              <![CDATA[The step 'user is logged into OrangeHRM as "Employee"' and 7 other step(s) are undefined.
+You can implement these steps using the snippet(s) below:
+
+@Given("user is logged into OrangeHRM as {string}")
+public void user_is_logged_into_orange_hrm_as(String string) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@When("user navigates to Leave module")
+public void user_navigates_to_leave_module() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@When("user clicks {string} option")
+public void user_clicks_option(String string) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@When("user selects leave type {string}")
+public void user_selects_leave_type(String string) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@When("user enters from date {string} and to date {string}")
+public void user_enters_from_date_and_to_date(String string, String string2) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@When("user enters comment {string}")
+public void user_enters_comment(String string) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@When("user clicks Apply button")
+public void user_clicks_apply_button() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Then("leave request should be submitted with status {string}")
+public void leave_request_should_be_submitted_with_status(String string) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[io.cucumber.testng.UndefinedStepException: The step 'user is logged into OrangeHRM as "Employee"' and 7 other step(s) are undefined.
+You can implement these steps using the snippet(s) below:
+
+@Given("user is logged into OrangeHRM as {string}")
+public void user_is_logged_into_orange_hrm_as(String string) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@When("user navigates to Leave module")
+public void user_navigates_to_leave_module() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@When("user clicks {string} option")
+public void user_clicks_option(String string) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@When("user selects leave type {string}")
+public void user_selects_leave_type(String string) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@When("user enters from date {string} and to date {string}")
+public void user_enters_from_date_and_to_date(String string, String string2) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@When("user enters comment {string}")
+public void user_enters_comment(String string) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@When("user clicks Apply button")
+public void user_clicks_apply_button() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Then("leave request should be submitted with status {string}")
+public void leave_request_should_be_submitted_with_status(String string) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+
+at ✽.user is logged into OrangeHRM as "Employee"(file:///C:/Users/Lenovo/eclipse-workspace/Rose26A/src/test/resources/Leave.Feature/Leave.feature:5)
+]]>
+            </full-stacktrace>
+          </exception> <!-- io.cucumber.testng.UndefinedStepException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.skillio.runner.Runner@37883b97]" started-at="2026-04-25T16:41:12 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-04-25T16:41:17 IST" duration-ms="5635" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["TC_LEAVE_02 - System rejects leave with invalid date range"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Leave - Apply and Manage Leave"]]>
+              </value>
+            </param>
+          </params>
+          <exception class="io.cucumber.testng.UndefinedStepException">
+            <message>
+              <![CDATA[The step 'user is logged into OrangeHRM as "Employee"' and 6 other step(s) are undefined.
+You can implement these steps using the snippet(s) below:
+
+@Given("user is logged into OrangeHRM as {string}")
+public void user_is_logged_into_orange_hrm_as(String string) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@When("user navigates to Leave module")
+public void user_navigates_to_leave_module() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@When("user clicks {string} option")
+public void user_clicks_option(String string) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@When("user selects leave type {string}")
+public void user_selects_leave_type(String string) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@When("user enters from date {string} and to date {string}")
+public void user_enters_from_date_and_to_date(String string, String string2) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@When("user clicks Apply button")
+public void user_clicks_apply_button() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Then("error message {string} should be displayed")
+public void error_message_should_be_displayed(String string) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[io.cucumber.testng.UndefinedStepException: The step 'user is logged into OrangeHRM as "Employee"' and 6 other step(s) are undefined.
+You can implement these steps using the snippet(s) below:
+
+@Given("user is logged into OrangeHRM as {string}")
+public void user_is_logged_into_orange_hrm_as(String string) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@When("user navigates to Leave module")
+public void user_navigates_to_leave_module() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@When("user clicks {string} option")
+public void user_clicks_option(String string) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@When("user selects leave type {string}")
+public void user_selects_leave_type(String string) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@When("user enters from date {string} and to date {string}")
+public void user_enters_from_date_and_to_date(String string, String string2) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@When("user clicks Apply button")
+public void user_clicks_apply_button() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Then("error message {string} should be displayed")
+public void error_message_should_be_displayed(String string) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+
+at ✽.user is logged into OrangeHRM as "Employee"(file:///C:/Users/Lenovo/eclipse-workspace/Rose26A/src/test/resources/Leave.Feature/Leave.feature:16)
+]]>
+            </full-stacktrace>
+          </exception> <!-- io.cucumber.testng.UndefinedStepException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.skillio.runner.Runner@37883b97]" started-at="2026-04-25T16:41:17 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-04-25T16:41:23 IST" duration-ms="5812" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["TC_LEAVE_03 - Admin can approve employee leave request"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Leave - Apply and Manage Leave"]]>
+              </value>
+            </param>
+          </params>
+          <exception class="io.cucumber.testng.UndefinedStepException">
+            <message>
+              <![CDATA[The step 'user is logged into OrangeHRM as "Admin"' and 6 other step(s) are undefined.
+You can implement these steps using the snippet(s) below:
+
+@Given("user is logged into OrangeHRM as {string}")
+public void user_is_logged_into_orange_hrm_as(String string) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@When("user navigates to Leave module")
+public void user_navigates_to_leave_module() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@When("user clicks {string} option")
+public void user_clicks_option(String string) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@When("user filters by status {string}")
+public void user_filters_by_status(String string) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@When("user opens first pending leave request")
+public void user_opens_first_pending_leave_request() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@When("user clicks Approve button")
+public void user_clicks_approve_button() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Then("leave status should change to {string}")
+public void leave_status_should_change_to(String string) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[io.cucumber.testng.UndefinedStepException: The step 'user is logged into OrangeHRM as "Admin"' and 6 other step(s) are undefined.
+You can implement these steps using the snippet(s) below:
+
+@Given("user is logged into OrangeHRM as {string}")
+public void user_is_logged_into_orange_hrm_as(String string) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@When("user navigates to Leave module")
+public void user_navigates_to_leave_module() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@When("user clicks {string} option")
+public void user_clicks_option(String string) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@When("user filters by status {string}")
+public void user_filters_by_status(String string) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@When("user opens first pending leave request")
+public void user_opens_first_pending_leave_request() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@When("user clicks Approve button")
+public void user_clicks_approve_button() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Then("leave status should change to {string}")
+public void leave_status_should_change_to(String string) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+
+at ✽.user is logged into OrangeHRM as "Admin"(file:///C:/Users/Lenovo/eclipse-workspace/Rose26A/src/test/resources/Leave.Feature/Leave.feature:26)
+]]>
+            </full-stacktrace>
+          </exception> <!-- io.cucumber.testng.UndefinedStepException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.skillio.runner.Runner@37883b97]" started-at="2026-04-25T16:41:23 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-04-25T16:41:30 IST" duration-ms="6923" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["TC_LEAVE_04 - Admin can reject employee leave request"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Leave - Apply and Manage Leave"]]>
+              </value>
+            </param>
+          </params>
+          <exception class="io.cucumber.testng.UndefinedStepException">
+            <message>
+              <![CDATA[The step 'user is logged into OrangeHRM as "Admin"' and 6 other step(s) are undefined.
+You can implement these steps using the snippet(s) below:
+
+@Given("user is logged into OrangeHRM as {string}")
+public void user_is_logged_into_orange_hrm_as(String string) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@When("user navigates to Leave module")
+public void user_navigates_to_leave_module() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@When("user clicks {string} option")
+public void user_clicks_option(String string) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@When("user filters by status {string}")
+public void user_filters_by_status(String string) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@When("user opens first pending leave request")
+public void user_opens_first_pending_leave_request() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@When("user clicks Reject button")
+public void user_clicks_reject_button() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Then("leave status should change to {string}")
+public void leave_status_should_change_to(String string) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[io.cucumber.testng.UndefinedStepException: The step 'user is logged into OrangeHRM as "Admin"' and 6 other step(s) are undefined.
+You can implement these steps using the snippet(s) below:
+
+@Given("user is logged into OrangeHRM as {string}")
+public void user_is_logged_into_orange_hrm_as(String string) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@When("user navigates to Leave module")
+public void user_navigates_to_leave_module() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@When("user clicks {string} option")
+public void user_clicks_option(String string) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@When("user filters by status {string}")
+public void user_filters_by_status(String string) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@When("user opens first pending leave request")
+public void user_opens_first_pending_leave_request() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@When("user clicks Reject button")
+public void user_clicks_reject_button() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Then("leave status should change to {string}")
+public void leave_status_should_change_to(String string) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+
+at ✽.user is logged into OrangeHRM as "Admin"(file:///C:/Users/Lenovo/eclipse-workspace/Rose26A/src/test/resources/Leave.Feature/Leave.feature:36)
+]]>
+            </full-stacktrace>
+          </exception> <!-- io.cucumber.testng.UndefinedStepException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.skillio.runner.Runner@37883b97]" started-at="2026-04-25T16:41:30 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-04-25T16:41:38 IST" duration-ms="8127" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["TC_LEAVE_05 - Employee applies for single-day leave"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Leave - Apply and Manage Leave"]]>
+              </value>
+            </param>
+          </params>
+          <exception class="io.cucumber.testng.UndefinedStepException">
+            <message>
+              <![CDATA[The step 'user is logged into OrangeHRM as "Employee"' and 6 other step(s) are undefined.
+You can implement these steps using the snippet(s) below:
+
+@Given("user is logged into OrangeHRM as {string}")
+public void user_is_logged_into_orange_hrm_as(String string) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@When("user navigates to Leave module")
+public void user_navigates_to_leave_module() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@When("user clicks {string} option")
+public void user_clicks_option(String string) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@When("user selects leave type {string}")
+public void user_selects_leave_type(String string) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@When("user enters from date {string} and to date {string}")
+public void user_enters_from_date_and_to_date(String string, String string2) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@When("user clicks Apply button")
+public void user_clicks_apply_button() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Then("leave request should be submitted with status {string}")
+public void leave_request_should_be_submitted_with_status(String string) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[io.cucumber.testng.UndefinedStepException: The step 'user is logged into OrangeHRM as "Employee"' and 6 other step(s) are undefined.
+You can implement these steps using the snippet(s) below:
+
+@Given("user is logged into OrangeHRM as {string}")
+public void user_is_logged_into_orange_hrm_as(String string) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@When("user navigates to Leave module")
+public void user_navigates_to_leave_module() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@When("user clicks {string} option")
+public void user_clicks_option(String string) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@When("user selects leave type {string}")
+public void user_selects_leave_type(String string) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@When("user enters from date {string} and to date {string}")
+public void user_enters_from_date_and_to_date(String string, String string2) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@When("user clicks Apply button")
+public void user_clicks_apply_button() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Then("leave request should be submitted with status {string}")
+public void leave_request_should_be_submitted_with_status(String string) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+
+at ✽.user is logged into OrangeHRM as "Employee"(file:///C:/Users/Lenovo/eclipse-workspace/Rose26A/src/test/resources/Leave.Feature/Leave.feature:46)
+]]>
+            </full-stacktrace>
+          </exception> <!-- io.cucumber.testng.UndefinedStepException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.skillio.runner.Runner@37883b97]" started-at="2026-04-25T16:41:38 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-04-25T16:41:45 IST" duration-ms="6831" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["TC_MYINFO_01 - Employee can update their nationality"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["My Info - Personal Information Management"]]>
+              </value>
+            </param>
+          </params>
+          <exception class="io.cucumber.testng.UndefinedStepException">
+            <message>
+              <![CDATA[The step 'user is logged into OrangeHRM as "Employee"' and 6 other step(s) are undefined.
+You can implement these steps using the snippet(s) below:
+
+@Given("user is logged into OrangeHRM as {string}")
+public void user_is_logged_into_orange_hrm_as(String string) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@When("user navigates to My Info module")
+public void user_navigates_to_my_info_module() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@When("user clicks on Personal Details tab")
+public void user_clicks_on_personal_details_tab() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@When("user selects nationality {string}")
+public void user_selects_nationality(String string) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@When("user clicks Save button")
+public void user_clicks_save_button() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Then("success toast message should be displayed")
+public void success_toast_message_should_be_displayed() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Then("nationality should be saved as {string}")
+public void nationality_should_be_saved_as(String string) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[io.cucumber.testng.UndefinedStepException: The step 'user is logged into OrangeHRM as "Employee"' and 6 other step(s) are undefined.
+You can implement these steps using the snippet(s) below:
+
+@Given("user is logged into OrangeHRM as {string}")
+public void user_is_logged_into_orange_hrm_as(String string) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@When("user navigates to My Info module")
+public void user_navigates_to_my_info_module() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@When("user clicks on Personal Details tab")
+public void user_clicks_on_personal_details_tab() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@When("user selects nationality {string}")
+public void user_selects_nationality(String string) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@When("user clicks Save button")
+public void user_clicks_save_button() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Then("success toast message should be displayed")
+public void success_toast_message_should_be_displayed() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Then("nationality should be saved as {string}")
+public void nationality_should_be_saved_as(String string) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+
+at ✽.user is logged into OrangeHRM as "Employee"(file:///C:/Users/Lenovo/eclipse-workspace/Rose26A/src/test/resources/MyInfo.Feature/MyInfo.feature:5)
+]]>
+            </full-stacktrace>
+          </exception> <!-- io.cucumber.testng.UndefinedStepException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.skillio.runner.Runner@37883b97]" started-at="2026-04-25T16:41:45 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-04-25T16:41:51 IST" duration-ms="5840" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["TC_MYINFO_02 - Employee can update contact information"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["My Info - Personal Information Management"]]>
+              </value>
+            </param>
+          </params>
+          <exception class="io.cucumber.testng.UndefinedStepException">
+            <message>
+              <![CDATA[The step 'user is logged into OrangeHRM as "Employee"' and 6 other step(s) are undefined.
+You can implement these steps using the snippet(s) below:
+
+@Given("user is logged into OrangeHRM as {string}")
+public void user_is_logged_into_orange_hrm_as(String string) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@When("user navigates to My Info module")
+public void user_navigates_to_my_info_module() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@When("user clicks on Contact Details tab")
+public void user_clicks_on_contact_details_tab() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@When("user enters street1 {string}")
+public void user_enters_street1(String string) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@When("user enters city {string}")
+public void user_enters_city(String string) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@When("user clicks Save button")
+public void user_clicks_save_button() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Then("success toast message should be displayed")
+public void success_toast_message_should_be_displayed() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[io.cucumber.testng.UndefinedStepException: The step 'user is logged into OrangeHRM as "Employee"' and 6 other step(s) are undefined.
+You can implement these steps using the snippet(s) below:
+
+@Given("user is logged into OrangeHRM as {string}")
+public void user_is_logged_into_orange_hrm_as(String string) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@When("user navigates to My Info module")
+public void user_navigates_to_my_info_module() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@When("user clicks on Contact Details tab")
+public void user_clicks_on_contact_details_tab() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@When("user enters street1 {string}")
+public void user_enters_street1(String string) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@When("user enters city {string}")
+public void user_enters_city(String string) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@When("user clicks Save button")
+public void user_clicks_save_button() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Then("success toast message should be displayed")
+public void success_toast_message_should_be_displayed() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+
+at ✽.user is logged into OrangeHRM as "Employee"(file:///C:/Users/Lenovo/eclipse-workspace/Rose26A/src/test/resources/MyInfo.Feature/MyInfo.feature:15)
+]]>
+            </full-stacktrace>
+          </exception> <!-- io.cucumber.testng.UndefinedStepException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.skillio.runner.Runner@37883b97]" started-at="2026-04-25T16:41:51 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-04-25T16:41:59 IST" duration-ms="8071" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["TC_MYINFO_03 - System rejects invalid date format in DOB field"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["My Info - Personal Information Management"]]>
+              </value>
+            </param>
+          </params>
+          <exception class="io.cucumber.testng.UndefinedStepException">
+            <message>
+              <![CDATA[The step 'user is logged into OrangeHRM as "Employee"' and 5 other step(s) are undefined.
+You can implement these steps using the snippet(s) below:
+
+@Given("user is logged into OrangeHRM as {string}")
+public void user_is_logged_into_orange_hrm_as(String string) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@When("user navigates to My Info module")
+public void user_navigates_to_my_info_module() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@When("user clicks on Personal Details tab")
+public void user_clicks_on_personal_details_tab() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@When("user enters date of birth {string}")
+public void user_enters_date_of_birth(String string) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@When("user clicks Save button")
+public void user_clicks_save_button() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Then("field validation error should appear under date of birth")
+public void field_validation_error_should_appear_under_date_of_birth() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[io.cucumber.testng.UndefinedStepException: The step 'user is logged into OrangeHRM as "Employee"' and 5 other step(s) are undefined.
+You can implement these steps using the snippet(s) below:
+
+@Given("user is logged into OrangeHRM as {string}")
+public void user_is_logged_into_orange_hrm_as(String string) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@When("user navigates to My Info module")
+public void user_navigates_to_my_info_module() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@When("user clicks on Personal Details tab")
+public void user_clicks_on_personal_details_tab() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@When("user enters date of birth {string}")
+public void user_enters_date_of_birth(String string) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@When("user clicks Save button")
+public void user_clicks_save_button() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Then("field validation error should appear under date of birth")
+public void field_validation_error_should_appear_under_date_of_birth() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+
+at ✽.user is logged into OrangeHRM as "Employee"(file:///C:/Users/Lenovo/eclipse-workspace/Rose26A/src/test/resources/MyInfo.Feature/MyInfo.feature:25)
+]]>
+            </full-stacktrace>
+          </exception> <!-- io.cucumber.testng.UndefinedStepException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.skillio.runner.Runner@37883b97]" started-at="2026-04-25T16:41:59 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-04-25T16:42:22 IST" duration-ms="23254" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["TC_MYINFO_04 - Employee adds an emergency contact"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["My Info - Personal Information Management"]]>
+              </value>
+            </param>
+          </params>
+          <exception class="io.cucumber.testng.UndefinedStepException">
+            <message>
+              <![CDATA[The step 'user is logged into OrangeHRM as "Employee"' and 8 other step(s) are undefined.
+You can implement these steps using the snippet(s) below:
+
+@Given("user is logged into OrangeHRM as {string}")
+public void user_is_logged_into_orange_hrm_as(String string) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@When("user navigates to My Info module")
+public void user_navigates_to_my_info_module() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@When("user clicks on Emergency Contacts tab")
+public void user_clicks_on_emergency_contacts_tab() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@When("user clicks Add button")
+public void user_clicks_add_button() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@When("user enters contact name {string}")
+public void user_enters_contact_name(String string) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@When("user enters relationship {string}")
+public void user_enters_relationship(String string) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@When("user enters home phone {string}")
+public void user_enters_home_phone(String string) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@When("user clicks Save button")
+public void user_clicks_save_button() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Then("emergency contact {string} should be listed")
+public void emergency_contact_should_be_listed(String string) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[io.cucumber.testng.UndefinedStepException: The step 'user is logged into OrangeHRM as "Employee"' and 8 other step(s) are undefined.
+You can implement these steps using the snippet(s) below:
+
+@Given("user is logged into OrangeHRM as {string}")
+public void user_is_logged_into_orange_hrm_as(String string) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@When("user navigates to My Info module")
+public void user_navigates_to_my_info_module() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@When("user clicks on Emergency Contacts tab")
+public void user_clicks_on_emergency_contacts_tab() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@When("user clicks Add button")
+public void user_clicks_add_button() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@When("user enters contact name {string}")
+public void user_enters_contact_name(String string) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@When("user enters relationship {string}")
+public void user_enters_relationship(String string) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@When("user enters home phone {string}")
+public void user_enters_home_phone(String string) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@When("user clicks Save button")
+public void user_clicks_save_button() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Then("emergency contact {string} should be listed")
+public void emergency_contact_should_be_listed(String string) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+
+at ✽.user is logged into OrangeHRM as "Employee"(file:///C:/Users/Lenovo/eclipse-workspace/Rose26A/src/test/resources/MyInfo.Feature/MyInfo.feature:34)
+]]>
+            </full-stacktrace>
+          </exception> <!-- io.cucumber.testng.UndefinedStepException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.skillio.runner.Runner@37883b97]" started-at="2026-04-25T16:42:22 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-04-25T16:42:28 IST" duration-ms="5779" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["TC_MYINFO_05 - First name field respects maximum character boundary"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["My Info - Personal Information Management"]]>
+              </value>
+            </param>
+          </params>
+          <exception class="io.cucumber.testng.UndefinedStepException">
+            <message>
+              <![CDATA[The step 'user is logged into OrangeHRM as "Employee"' and 5 other step(s) are undefined.
+You can implement these steps using the snippet(s) below:
+
+@Given("user is logged into OrangeHRM as {string}")
+public void user_is_logged_into_orange_hrm_as(String string) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@When("user navigates to My Info module")
+public void user_navigates_to_my_info_module() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@When("user clicks on Personal Details tab")
+public void user_clicks_on_personal_details_tab() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@When("user enters first name with {int} characters {string}")
+public void user_enters_first_name_with_characters(Integer int1, String string) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@When("user clicks Save button")
+public void user_clicks_save_button() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Then("the name should be saved successfully without any error")
+public void the_name_should_be_saved_successfully_without_any_error() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[io.cucumber.testng.UndefinedStepException: The step 'user is logged into OrangeHRM as "Employee"' and 5 other step(s) are undefined.
+You can implement these steps using the snippet(s) below:
+
+@Given("user is logged into OrangeHRM as {string}")
+public void user_is_logged_into_orange_hrm_as(String string) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@When("user navigates to My Info module")
+public void user_navigates_to_my_info_module() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@When("user clicks on Personal Details tab")
+public void user_clicks_on_personal_details_tab() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@When("user enters first name with {int} characters {string}")
+public void user_enters_first_name_with_characters(Integer int1, String string) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@When("user clicks Save button")
+public void user_clicks_save_button() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Then("the name should be saved successfully without any error")
+public void the_name_should_be_saved_successfully_without_any_error() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+
+at ✽.user is logged into OrangeHRM as "Employee"(file:///C:/Users/Lenovo/eclipse-workspace/Rose26A/src/test/resources/MyInfo.Feature/MyInfo.feature:46)
+]]>
+            </full-stacktrace>
+          </exception> <!-- io.cucumber.testng.UndefinedStepException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.skillio.runner.Runner@37883b97]" started-at="2026-04-25T16:42:28 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-04-25T16:42:35 IST" duration-ms="6936" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["TC_PIM_01 - Admin can add a new employee with mandatory fields"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["PIM - Employee Management"]]>
+              </value>
+            </param>
+          </params>
+          <exception class="io.cucumber.testng.UndefinedStepException">
+            <message>
+              <![CDATA[The step 'user is logged into OrangeHRM as "Admin"' and 7 other step(s) are undefined.
+You can implement these steps using the snippet(s) below:
+
+@Given("user is logged into OrangeHRM as {string}")
+public void user_is_logged_into_orange_hrm_as(String string) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@When("user navigates to PIM module")
+public void user_navigates_to_pim_module() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@When("user clicks on {string} button")
+public void user_clicks_on_button(String string) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@When("user enters first name {string} and last name {string}")
+public void user_enters_first_name_and_last_name(String string, String string2) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@When("user enters employee ID {string}")
+public void user_enters_employee_id(String string) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@When("user clicks Save button")
+public void user_clicks_save_button() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Then("employee {string} should be successfully created")
+public void employee_should_be_successfully_created(String string) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Then("success toast message should be displayed")
+public void success_toast_message_should_be_displayed() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[io.cucumber.testng.UndefinedStepException: The step 'user is logged into OrangeHRM as "Admin"' and 7 other step(s) are undefined.
+You can implement these steps using the snippet(s) below:
+
+@Given("user is logged into OrangeHRM as {string}")
+public void user_is_logged_into_orange_hrm_as(String string) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@When("user navigates to PIM module")
+public void user_navigates_to_pim_module() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@When("user clicks on {string} button")
+public void user_clicks_on_button(String string) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@When("user enters first name {string} and last name {string}")
+public void user_enters_first_name_and_last_name(String string, String string2) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@When("user enters employee ID {string}")
+public void user_enters_employee_id(String string) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@When("user clicks Save button")
+public void user_clicks_save_button() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Then("employee {string} should be successfully created")
+public void employee_should_be_successfully_created(String string) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Then("success toast message should be displayed")
+public void success_toast_message_should_be_displayed() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+
+at ✽.user is logged into OrangeHRM as "Admin"(file:///C:/Users/Lenovo/eclipse-workspace/Rose26A/src/test/resources/PIM.Feature/PIM.feature:4)
+]]>
+            </full-stacktrace>
+          </exception> <!-- io.cucumber.testng.UndefinedStepException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.skillio.runner.Runner@37883b97]" started-at="2026-04-25T16:42:35 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-04-25T16:42:42 IST" duration-ms="6653" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["TC_PIM_02 - System rejects duplicate employee ID"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["PIM - Employee Management"]]>
+              </value>
+            </param>
+          </params>
+          <exception class="io.cucumber.testng.UndefinedStepException">
+            <message>
+              <![CDATA[The step 'user is logged into OrangeHRM as "Admin"' and 6 other step(s) are undefined.
+You can implement these steps using the snippet(s) below:
+
+@Given("user is logged into OrangeHRM as {string}")
+public void user_is_logged_into_orange_hrm_as(String string) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@When("user navigates to PIM module")
+public void user_navigates_to_pim_module() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@When("user clicks on {string} button")
+public void user_clicks_on_button(String string) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@When("user enters first name {string} and last name {string}")
+public void user_enters_first_name_and_last_name(String string, String string2) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@When("user enters employee ID {string}")
+public void user_enters_employee_id(String string) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@When("user clicks Save button")
+public void user_clicks_save_button() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Then("error message {string} should be displayed")
+public void error_message_should_be_displayed(String string) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[io.cucumber.testng.UndefinedStepException: The step 'user is logged into OrangeHRM as "Admin"' and 6 other step(s) are undefined.
+You can implement these steps using the snippet(s) below:
+
+@Given("user is logged into OrangeHRM as {string}")
+public void user_is_logged_into_orange_hrm_as(String string) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@When("user navigates to PIM module")
+public void user_navigates_to_pim_module() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@When("user clicks on {string} button")
+public void user_clicks_on_button(String string) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@When("user enters first name {string} and last name {string}")
+public void user_enters_first_name_and_last_name(String string, String string2) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@When("user enters employee ID {string}")
+public void user_enters_employee_id(String string) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@When("user clicks Save button")
+public void user_clicks_save_button() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Then("error message {string} should be displayed")
+public void error_message_should_be_displayed(String string) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+
+at ✽.user is logged into OrangeHRM as "Admin"(file:///C:/Users/Lenovo/eclipse-workspace/Rose26A/src/test/resources/PIM.Feature/PIM.feature:4)
+]]>
+            </full-stacktrace>
+          </exception> <!-- io.cucumber.testng.UndefinedStepException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.skillio.runner.Runner@37883b97]" started-at="2026-04-25T16:42:42 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-04-25T16:42:49 IST" duration-ms="7677" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["TC_PIM_03 - Validation triggers when mandatory fields are empty"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["PIM - Employee Management"]]>
+              </value>
+            </param>
+          </params>
+          <exception class="io.cucumber.testng.UndefinedStepException">
+            <message>
+              <![CDATA[The step 'user is logged into OrangeHRM as "Admin"' and 7 other step(s) are undefined.
+You can implement these steps using the snippet(s) below:
+
+@Given("user is logged into OrangeHRM as {string}")
+public void user_is_logged_into_orange_hrm_as(String string) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@When("user navigates to PIM module")
+public void user_navigates_to_pim_module() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@When("user clicks on {string} button")
+public void user_clicks_on_button(String string) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@When("user clears first name field")
+public void user_clears_first_name_field() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@When("user clears last name field")
+public void user_clears_last_name_field() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@When("user clicks Save button")
+public void user_clicks_save_button() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Then("field validation error {string} should appear under first name")
+public void field_validation_error_should_appear_under_first_name(String string) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Then("field validation error {string} should appear under last name")
+public void field_validation_error_should_appear_under_last_name(String string) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[io.cucumber.testng.UndefinedStepException: The step 'user is logged into OrangeHRM as "Admin"' and 7 other step(s) are undefined.
+You can implement these steps using the snippet(s) below:
+
+@Given("user is logged into OrangeHRM as {string}")
+public void user_is_logged_into_orange_hrm_as(String string) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@When("user navigates to PIM module")
+public void user_navigates_to_pim_module() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@When("user clicks on {string} button")
+public void user_clicks_on_button(String string) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@When("user clears first name field")
+public void user_clears_first_name_field() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@When("user clears last name field")
+public void user_clears_last_name_field() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@When("user clicks Save button")
+public void user_clicks_save_button() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Then("field validation error {string} should appear under first name")
+public void field_validation_error_should_appear_under_first_name(String string) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Then("field validation error {string} should appear under last name")
+public void field_validation_error_should_appear_under_last_name(String string) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+
+at ✽.user is logged into OrangeHRM as "Admin"(file:///C:/Users/Lenovo/eclipse-workspace/Rose26A/src/test/resources/PIM.Feature/PIM.feature:4)
+]]>
+            </full-stacktrace>
+          </exception> <!-- io.cucumber.testng.UndefinedStepException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.skillio.runner.Runner@37883b97]" started-at="2026-04-25T16:42:49 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-04-25T16:43:07 IST" duration-ms="17583" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["TC_PIM_04 - Admin can search for an existing employee"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["PIM - Employee Management"]]>
+              </value>
+            </param>
+          </params>
+          <exception class="io.cucumber.testng.UndefinedStepException">
+            <message>
+              <![CDATA[The step 'user is logged into OrangeHRM as "Admin"' and 4 other step(s) are undefined.
+You can implement these steps using the snippet(s) below:
+
+@Given("user is logged into OrangeHRM as {string}")
+public void user_is_logged_into_orange_hrm_as(String string) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@When("user navigates to PIM module")
+public void user_navigates_to_pim_module() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@When("user enters employee name {string} in search box")
+public void user_enters_employee_name_in_search_box(String string) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@When("user clicks Search button")
+public void user_clicks_search_button() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Then("employee {string} should appear in search results")
+public void employee_should_appear_in_search_results(String string) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[io.cucumber.testng.UndefinedStepException: The step 'user is logged into OrangeHRM as "Admin"' and 4 other step(s) are undefined.
+You can implement these steps using the snippet(s) below:
+
+@Given("user is logged into OrangeHRM as {string}")
+public void user_is_logged_into_orange_hrm_as(String string) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@When("user navigates to PIM module")
+public void user_navigates_to_pim_module() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@When("user enters employee name {string} in search box")
+public void user_enters_employee_name_in_search_box(String string) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@When("user clicks Search button")
+public void user_clicks_search_button() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Then("employee {string} should appear in search results")
+public void employee_should_appear_in_search_results(String string) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+
+at ✽.user is logged into OrangeHRM as "Admin"(file:///C:/Users/Lenovo/eclipse-workspace/Rose26A/src/test/resources/PIM.Feature/PIM.feature:4)
+]]>
+            </full-stacktrace>
+          </exception> <!-- io.cucumber.testng.UndefinedStepException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.skillio.runner.Runner@37883b97]" started-at="2026-04-25T16:43:07 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-04-25T16:43:15 IST" duration-ms="8417" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["TC_PIM_05 - Admin can delete an employee record"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["PIM - Employee Management"]]>
+              </value>
+            </param>
+          </params>
+          <exception class="io.cucumber.testng.UndefinedStepException">
+            <message>
+              <![CDATA[The step 'user is logged into OrangeHRM as "Admin"' and 6 other step(s) are undefined.
+You can implement these steps using the snippet(s) below:
+
+@Given("user is logged into OrangeHRM as {string}")
+public void user_is_logged_into_orange_hrm_as(String string) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@When("user navigates to PIM module")
+public void user_navigates_to_pim_module() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@When("user searches for employee {string}")
+public void user_searches_for_employee(String string) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@When("user selects employee checkbox")
+public void user_selects_employee_checkbox() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@When("user clicks Delete Selected button")
+public void user_clicks_delete_selected_button() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@When("user confirms deletion in the dialog")
+public void user_confirms_deletion_in_the_dialog() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Then("employee")
+public void employee() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[io.cucumber.testng.UndefinedStepException: The step 'user is logged into OrangeHRM as "Admin"' and 6 other step(s) are undefined.
+You can implement these steps using the snippet(s) below:
+
+@Given("user is logged into OrangeHRM as {string}")
+public void user_is_logged_into_orange_hrm_as(String string) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@When("user navigates to PIM module")
+public void user_navigates_to_pim_module() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@When("user searches for employee {string}")
+public void user_searches_for_employee(String string) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@When("user selects employee checkbox")
+public void user_selects_employee_checkbox() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@When("user clicks Delete Selected button")
+public void user_clicks_delete_selected_button() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@When("user confirms deletion in the dialog")
+public void user_confirms_deletion_in_the_dialog() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Then("employee")
+public void employee() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+
+at ✽.user is logged into OrangeHRM as "Admin"(file:///C:/Users/Lenovo/eclipse-workspace/Rose26A/src/test/resources/PIM.Feature/PIM.feature:4)
+]]>
+            </full-stacktrace>
+          </exception> <!-- io.cucumber.testng.UndefinedStepException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.skillio.runner.Runner@37883b97]" started-at="2026-04-25T16:43:15 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-04-25T16:43:23 IST" duration-ms="7272" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["TC_REC_01 - Admin can add a new job vacancy"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Recruitment - Job Vacancy and Application Management"]]>
+              </value>
+            </param>
+          </params>
+          <exception class="io.cucumber.testng.UndefinedStepException">
+            <message>
+              <![CDATA[The step 'user is logged into OrangeHRM as "Admin"' and 7 other step(s) are undefined.
+You can implement these steps using the snippet(s) below:
+
+@Given("user is logged into OrangeHRM as {string}")
+public void user_is_logged_into_orange_hrm_as(String string) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@When("user navigates to Recruitment module")
+public void user_navigates_to_recruitment_module() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@When("user clicks on {string} button in Vacancies section")
+public void user_clicks_on_button_in_vacancies_section(String string) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@When("user enters vacancy name {string}")
+public void user_enters_vacancy_name(String string) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@When("user selects job title {string}")
+public void user_selects_job_title(String string) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@When("user enters number of positions {string}")
+public void user_enters_number_of_positions(String string) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@When("user clicks Save button")
+public void user_clicks_save_button() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Then("vacancy {string} should appear in the vacancies list")
+public void vacancy_should_appear_in_the_vacancies_list(String string) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[io.cucumber.testng.UndefinedStepException: The step 'user is logged into OrangeHRM as "Admin"' and 7 other step(s) are undefined.
+You can implement these steps using the snippet(s) below:
+
+@Given("user is logged into OrangeHRM as {string}")
+public void user_is_logged_into_orange_hrm_as(String string) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@When("user navigates to Recruitment module")
+public void user_navigates_to_recruitment_module() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@When("user clicks on {string} button in Vacancies section")
+public void user_clicks_on_button_in_vacancies_section(String string) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@When("user enters vacancy name {string}")
+public void user_enters_vacancy_name(String string) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@When("user selects job title {string}")
+public void user_selects_job_title(String string) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@When("user enters number of positions {string}")
+public void user_enters_number_of_positions(String string) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@When("user clicks Save button")
+public void user_clicks_save_button() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Then("vacancy {string} should appear in the vacancies list")
+public void vacancy_should_appear_in_the_vacancies_list(String string) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+
+at ✽.user is logged into OrangeHRM as "Admin"(file:///C:/Users/Lenovo/eclipse-workspace/Rose26A/src/test/resources/Recruitment.Feature/Recruitment.feature:4)
+]]>
+            </full-stacktrace>
+          </exception> <!-- io.cucumber.testng.UndefinedStepException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.skillio.runner.Runner@37883b97]" started-at="2026-04-25T16:43:23 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-04-25T16:43:30 IST" duration-ms="7434" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["TC_REC_02 - Vacancy creation fails without job title"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Recruitment - Job Vacancy and Application Management"]]>
+              </value>
+            </param>
+          </params>
+          <exception class="io.cucumber.testng.UndefinedStepException">
+            <message>
+              <![CDATA[The step 'user is logged into OrangeHRM as "Admin"' and 6 other step(s) are undefined.
+You can implement these steps using the snippet(s) below:
+
+@Given("user is logged into OrangeHRM as {string}")
+public void user_is_logged_into_orange_hrm_as(String string) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@When("user navigates to Recruitment module")
+public void user_navigates_to_recruitment_module() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@When("user clicks on {string} button in Vacancies section")
+public void user_clicks_on_button_in_vacancies_section(String string) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@When("user enters vacancy name {string}")
+public void user_enters_vacancy_name(String string) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@When("user leaves job title blank")
+public void user_leaves_job_title_blank() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@When("user clicks Save button")
+public void user_clicks_save_button() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Then("field validation error {string} should appear under job title field")
+public void field_validation_error_should_appear_under_job_title_field(String string) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[io.cucumber.testng.UndefinedStepException: The step 'user is logged into OrangeHRM as "Admin"' and 6 other step(s) are undefined.
+You can implement these steps using the snippet(s) below:
+
+@Given("user is logged into OrangeHRM as {string}")
+public void user_is_logged_into_orange_hrm_as(String string) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@When("user navigates to Recruitment module")
+public void user_navigates_to_recruitment_module() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@When("user clicks on {string} button in Vacancies section")
+public void user_clicks_on_button_in_vacancies_section(String string) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@When("user enters vacancy name {string}")
+public void user_enters_vacancy_name(String string) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@When("user leaves job title blank")
+public void user_leaves_job_title_blank() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@When("user clicks Save button")
+public void user_clicks_save_button() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Then("field validation error {string} should appear under job title field")
+public void field_validation_error_should_appear_under_job_title_field(String string) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+
+at ✽.user is logged into OrangeHRM as "Admin"(file:///C:/Users/Lenovo/eclipse-workspace/Rose26A/src/test/resources/Recruitment.Feature/Recruitment.feature:4)
+]]>
+            </full-stacktrace>
+          </exception> <!-- io.cucumber.testng.UndefinedStepException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.skillio.runner.Runner@37883b97]" started-at="2026-04-25T16:43:30 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-04-25T16:43:39 IST" duration-ms="9341" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["TC_REC_03 - Admin can add candidate for a vacancy"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Recruitment - Job Vacancy and Application Management"]]>
+              </value>
+            </param>
+          </params>
+          <exception class="io.cucumber.testng.UndefinedStepException">
+            <message>
+              <![CDATA[The step 'user is logged into OrangeHRM as "Admin"' and 7 other step(s) are undefined.
+You can implement these steps using the snippet(s) below:
+
+@Given("user is logged into OrangeHRM as {string}")
+public void user_is_logged_into_orange_hrm_as(String string) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@When("user navigates to Recruitment module")
+public void user_navigates_to_recruitment_module() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@When("user opens vacancy {string}")
+public void user_opens_vacancy(String string) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@When("user clicks {string} in candidates section")
+public void user_clicks_in_candidates_section(String string) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@When("user enters candidate first name {string} and last name {string}")
+public void user_enters_candidate_first_name_and_last_name(String string, String string2) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@When("user enters candidate email {string}")
+public void user_enters_candidate_email(String string) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@When("user clicks Save button")
+public void user_clicks_save_button() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Then("candidate {string} should be added under {string} vacancy")
+public void candidate_should_be_added_under_vacancy(String string, String string2) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[io.cucumber.testng.UndefinedStepException: The step 'user is logged into OrangeHRM as "Admin"' and 7 other step(s) are undefined.
+You can implement these steps using the snippet(s) below:
+
+@Given("user is logged into OrangeHRM as {string}")
+public void user_is_logged_into_orange_hrm_as(String string) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@When("user navigates to Recruitment module")
+public void user_navigates_to_recruitment_module() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@When("user opens vacancy {string}")
+public void user_opens_vacancy(String string) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@When("user clicks {string} in candidates section")
+public void user_clicks_in_candidates_section(String string) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@When("user enters candidate first name {string} and last name {string}")
+public void user_enters_candidate_first_name_and_last_name(String string, String string2) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@When("user enters candidate email {string}")
+public void user_enters_candidate_email(String string) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@When("user clicks Save button")
+public void user_clicks_save_button() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Then("candidate {string} should be added under {string} vacancy")
+public void candidate_should_be_added_under_vacancy(String string, String string2) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+
+at ✽.user is logged into OrangeHRM as "Admin"(file:///C:/Users/Lenovo/eclipse-workspace/Rose26A/src/test/resources/Recruitment.Feature/Recruitment.feature:4)
+]]>
+            </full-stacktrace>
+          </exception> <!-- io.cucumber.testng.UndefinedStepException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.skillio.runner.Runner@37883b97]" started-at="2026-04-25T16:43:39 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-04-25T16:43:45 IST" duration-ms="5988" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["TC_REC_04 - System rejects invalid candidate email"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Recruitment - Job Vacancy and Application Management"]]>
+              </value>
+            </param>
+          </params>
+          <exception class="io.cucumber.testng.UndefinedStepException">
+            <message>
+              <![CDATA[The step 'user is logged into OrangeHRM as "Admin"' and 7 other step(s) are undefined.
+You can implement these steps using the snippet(s) below:
+
+@Given("user is logged into OrangeHRM as {string}")
+public void user_is_logged_into_orange_hrm_as(String string) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@When("user navigates to Recruitment module")
+public void user_navigates_to_recruitment_module() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@When("user opens vacancy {string}")
+public void user_opens_vacancy(String string) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@When("user clicks {string} in candidates section")
+public void user_clicks_in_candidates_section(String string) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@When("user enters candidate first name {string} and last name {string}")
+public void user_enters_candidate_first_name_and_last_name(String string, String string2) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@When("user enters candidate email {string}")
+public void user_enters_candidate_email(String string) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@When("user clicks Save button")
+public void user_clicks_save_button() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Then("field validation error {string} should appear")
+public void field_validation_error_should_appear(String string) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[io.cucumber.testng.UndefinedStepException: The step 'user is logged into OrangeHRM as "Admin"' and 7 other step(s) are undefined.
+You can implement these steps using the snippet(s) below:
+
+@Given("user is logged into OrangeHRM as {string}")
+public void user_is_logged_into_orange_hrm_as(String string) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@When("user navigates to Recruitment module")
+public void user_navigates_to_recruitment_module() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@When("user opens vacancy {string}")
+public void user_opens_vacancy(String string) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@When("user clicks {string} in candidates section")
+public void user_clicks_in_candidates_section(String string) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@When("user enters candidate first name {string} and last name {string}")
+public void user_enters_candidate_first_name_and_last_name(String string, String string2) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@When("user enters candidate email {string}")
+public void user_enters_candidate_email(String string) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@When("user clicks Save button")
+public void user_clicks_save_button() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Then("field validation error {string} should appear")
+public void field_validation_error_should_appear(String string) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+
+at ✽.user is logged into OrangeHRM as "Admin"(file:///C:/Users/Lenovo/eclipse-workspace/Rose26A/src/test/resources/Recruitment.Feature/Recruitment.feature:4)
+]]>
+            </full-stacktrace>
+          </exception> <!-- io.cucumber.testng.UndefinedStepException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.skillio.runner.Runner@37883b97]" started-at="2026-04-25T16:43:45 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-04-25T16:43:54 IST" duration-ms="8426" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["TC_REC_05 - Admin can search candidates by vacancy"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Recruitment - Job Vacancy and Application Management"]]>
+              </value>
+            </param>
+          </params>
+          <exception class="io.cucumber.testng.UndefinedStepException">
+            <message>
+              <![CDATA[The step 'user is logged into OrangeHRM as "Admin"' and 4 other step(s) are undefined.
+You can implement these steps using the snippet(s) below:
+
+@Given("user is logged into OrangeHRM as {string}")
+public void user_is_logged_into_orange_hrm_as(String string) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@When("user navigates to Recruitment module")
+public void user_navigates_to_recruitment_module() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@When("user selects vacancy {string} in candidate search form")
+public void user_selects_vacancy_in_candidate_search_form(String string) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@When("user clicks Search button")
+public void user_clicks_search_button() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Then("candidates list for {string} should be displayed")
+public void candidates_list_for_should_be_displayed(String string) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[io.cucumber.testng.UndefinedStepException: The step 'user is logged into OrangeHRM as "Admin"' and 4 other step(s) are undefined.
+You can implement these steps using the snippet(s) below:
+
+@Given("user is logged into OrangeHRM as {string}")
+public void user_is_logged_into_orange_hrm_as(String string) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@When("user navigates to Recruitment module")
+public void user_navigates_to_recruitment_module() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@When("user selects vacancy {string} in candidate search form")
+public void user_selects_vacancy_in_candidate_search_form(String string) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@When("user clicks Search button")
+public void user_clicks_search_button() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Then("candidates list for {string} should be displayed")
+public void candidates_list_for_should_be_displayed(String string) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+
+at ✽.user is logged into OrangeHRM as "Admin"(file:///C:/Users/Lenovo/eclipse-workspace/Rose26A/src/test/resources/Recruitment.Feature/Recruitment.feature:4)
+]]>
+            </full-stacktrace>
+          </exception> <!-- io.cucumber.testng.UndefinedStepException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:com.skillio.runner.Runner@37883b97]" started-at="2026-04-25T16:43:54 IST" name="tearDownClass" finished-at="2026-04-25T16:43:54 IST" duration-ms="17" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDownClass -->
