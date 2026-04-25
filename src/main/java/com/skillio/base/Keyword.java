@@ -1,5 +1,7 @@
 package com.skillio.base;
 
+import java.time.Duration;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.InvalidSelectorException;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -8,111 +10,84 @@ import org.openqa.selenium.remote.RemoteWebDriver;
 
 import com.skillio.exceptions.InvalidBrowserNameException;
 
-
-
-/**
- * This class contains all the keywords related to Selenium WebDriver.
- * Keywords are nothing but the methods which perform some action on the web page.
- *  These keywords are used in the test case classes to perform the actions on the web page.
- */
 public class Keyword {
-    
-    // Replace the single static driver with thread-local driver to allow multiple threads to run independently.
+
     public static final ThreadLocal<RemoteWebDriver> threadLocal = new ThreadLocal<>();
-    
-    // Helper to get the current thread's driver. May return null if openBrowser wasn't called in this thread.
+
     public static RemoteWebDriver getDriver() {
-        return threadLocal.get();
+        RemoteWebDriver driver = threadLocal.get();
+        if (driver == null) {
+            throw new RuntimeException("WebDriver is not initialized for this thread.");
+        }
+        return driver;
     }
+
     
-    /**
-     * Opens a browser for the current thread and stores it in ThreadLocal.
-     */
     public static void openBrowser(String browserName) {
-        RemoteWebDriver localDriver;
+        RemoteWebDriver driver;
+
         if (browserName.equalsIgnoreCase("chrome")) {
-            threadLocal.set(new ChromeDriver());
+            driver = new ChromeDriver();
         } else if (browserName.equalsIgnoreCase("firefox")) {
-            threadLocal.set(new FirefoxDriver());
+            driver = new FirefoxDriver();
         } else {
             throw new InvalidBrowserNameException(browserName);
         }
+
+        threadLocal.set(driver);
+
         
+        
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
+        driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(60));
     }
 
-    public static void launchUrl(String Url) {
-                threadLocal.get().get(Url);
-        System.out.println("Launched Url: "+ Url);
+    public static void launchUrl(String url) {
+        getDriver().get(url);
+        System.out.println("Launched Url: " + url);
     }
-    /**
-     * This method will enter text in the text box based on the locator type and locator value pass by the user.Supported locator types are:
-     * <ul>
-     * <li>id</li>
-     * <lI>name</li>
-     * <li>className</li>
-     * <li>tagName</li>
-     * <li>linkText</li>
-     * <li>partialLinkText</li>
-     * <li>cssSelector</li>
-     * <li>xpath</li>
-     * </ul>
-     */
-    public static void enterText(String locatorType,String locatorvalue, String textToEnter) {
-               if(locatorType.equalsIgnoreCase("id")) {
-           threadLocal.get().findElement(By.id(locatorvalue)).sendKeys(textToEnter);
-        } else if (locatorType.equalsIgnoreCase("name")) {
-            threadLocal.get().findElement(By.name(locatorvalue)).sendKeys(textToEnter);
-        } else if (locatorType.equalsIgnoreCase("className")) {
-            threadLocal.get().findElement(By.className(locatorvalue)).sendKeys(textToEnter);
-        } else if (locatorType.equalsIgnoreCase("tagName")) {
-            threadLocal.get().findElement(By.tagName(locatorvalue)).sendKeys(textToEnter);
-        } else if (locatorType.equalsIgnoreCase("linkText")) {
-            threadLocal.get().findElement(By.linkText(locatorvalue)).sendKeys(textToEnter);
-        } else if (locatorType.equalsIgnoreCase("partialLinkText")) {
-            threadLocal.get().findElement(By.partialLinkText(locatorvalue)).sendKeys(textToEnter);
-        } else if (locatorType.equalsIgnoreCase("cssSelector")) {
-            threadLocal.get().findElement(By.cssSelector(locatorvalue)).sendKeys(textToEnter);
-        } else if (locatorType.equalsIgnoreCase("xpath")) {
-            threadLocal.get().findElement(By.xpath(locatorvalue)).sendKeys(textToEnter);
-        } else {
-            throw new InvalidSelectorException(locatorType);
+
+    
+    public static void enterText(String locatorType, String locatorValue, String text) {
+        getElement(locatorType, locatorValue).sendKeys(text);
+    }
+
+    public static void clickOn(String locatorType, String locatorValue) {
+        getElement(locatorType, locatorValue).click();
+    }
+
+    private static org.openqa.selenium.WebElement getElement(String type, String value) {
+        RemoteWebDriver driver = getDriver();
+
+        switch (type.toLowerCase()) {
+            case "id": return driver.findElement(By.id(value));
+            case "name": return driver.findElement(By.name(value));
+            case "classname": return driver.findElement(By.className(value));
+            case "tagname": return driver.findElement(By.tagName(value));
+            case "linktext": return driver.findElement(By.linkText(value));
+            case "partiallinktext": return driver.findElement(By.partialLinkText(value));
+            case "cssselector": return driver.findElement(By.cssSelector(value));
+            case "xpath": return driver.findElement(By.xpath(value));
+            default: throw new InvalidSelectorException(type);
+        }
+    }
+
+   
+    public static void quitBrowser() {
+        RemoteWebDriver driver = threadLocal.get();
+
+        if (driver == null) {
+            System.out.println("No driver found for this thread.");
+            return;
         }
 
+        try {
+            driver.quit();
+            System.out.println("Driver quit successfully");
+        } catch (Exception e) {
+            System.err.println("Error while quitting: " + e.getMessage());
+        } finally {
+            threadLocal.remove(); 
+        }
     }
-    
-    /**
-     * This method will click on the web element based on the locator type and locator value pass by the user.Supported locator types are:
-     * @param LocatorType
-     * @param locatorValue
-     */
-    public static void clickOn(String LocatorType, String locatorValue) {
-       
-         if (LocatorType.equalsIgnoreCase("id")) {
-             threadLocal.get().findElement(By.id(locatorValue)).click();
-         } else if (LocatorType.equalsIgnoreCase("name")) {
-             threadLocal.get().findElement(By.name(locatorValue)).click();
-         } else if (LocatorType.equalsIgnoreCase("className")) {
-             threadLocal.get().findElement(By.className(locatorValue)).click();
-         } else if (LocatorType.equalsIgnoreCase("tagName")) {
-             threadLocal.get().findElement(By.tagName(locatorValue)).click();
-         } else if (LocatorType.equalsIgnoreCase("linkText")) {
-             threadLocal.get().findElement(By.linkText(locatorValue)).click();
-         } else if (LocatorType.equalsIgnoreCase("partialLinkText")) {
-             threadLocal.get().findElement(By.partialLinkText(locatorValue)).click();
-         } else if (LocatorType.equalsIgnoreCase("cssSelector")) {
-             threadLocal.get().findElement(By.cssSelector(locatorValue)).click();
-         } else if (LocatorType.equalsIgnoreCase("xpath")) {
-             threadLocal.get().findElement(By.xpath(locatorValue)).click();
-         } else {
-             throw new InvalidSelectorException(LocatorType);
-         }
-        
-
-    }
-    public static void quitBrowser() {
-		threadLocal.get().quit();
-		System.out.println("Driver is quite successfully");
-
-	}
-    
 }

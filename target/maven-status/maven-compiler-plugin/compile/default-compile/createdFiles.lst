@@ -8,5 +8,6 @@ com\skillio\pages\AddUserPage.class
 com\skillio\base\Keyword.class
 com\skillio\utils\WaitFor.class
 com\skillio\pages\LoginPage.class
+com\skillio\stepdefinitions\copy\LoginStepsDisabled.class
 com\skillio\pages\HomePage.class
 com\skillio\utils\PropUtil.class

@@ -7,7 +7,6 @@
         <methods>
           <include name="verifyIfUserIsCreatedAndPresentInAdminUSers"/>
           <include name="setUpTest"/>
-          <include name="verifyIfUserIsCreatedAndPresentInAdminUSersUsingKeywords"/>
           <include name="tearDownTest"/>
           <include name="verifyIfUserIsCreatedAndPresentInAdminUSersUsingPOM"/>
         </methods>

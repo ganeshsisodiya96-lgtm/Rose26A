@@ -1,3 +1,2 @@
-com\skillio\runner\Runner.class
-com\skillio\base\TestBase.class
 com\skillio\AdminTestCase\AdminTestCase.class
+com\skillio\runner\Runner.class

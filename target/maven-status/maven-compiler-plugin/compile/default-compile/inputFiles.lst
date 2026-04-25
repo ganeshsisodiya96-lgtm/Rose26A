@@ -5,8 +5,9 @@ C:\Users\Lenovo\eclipse-workspace\Rose26A\src\main\java\com\skillio\pages\AdminP
 C:\Users\Lenovo\eclipse-workspace\Rose26A\src\main\java\com\skillio\pages\AddUserPage.java
 C:\Users\Lenovo\eclipse-workspace\Rose26A\src\main\java\com\skillio\pages\HomePage.java
 C:\Users\Lenovo\eclipse-workspace\Rose26A\src\main\java\com\skillio\pages\LoginPage.java
-C:\Users\Lenovo\eclipse-workspace\Rose26A\src\main\java\com\skillio\utils\Locator.java
 C:\Users\Lenovo\eclipse-workspace\Rose26A\src\main\java\com\skillio\stepdefinitions\LoginSteps.java
+C:\Users\Lenovo\eclipse-workspace\Rose26A\src\main\java\com\skillio\stepdefinitions\copy\LoginSteps.java
 C:\Users\Lenovo\eclipse-workspace\Rose26A\src\main\java\com\skillio\utils\App.java
-C:\Users\Lenovo\eclipse-workspace\Rose26A\src\main\java\com\skillio\utils\PropUtil.java
 C:\Users\Lenovo\eclipse-workspace\Rose26A\src\main\java\com\skillio\exceptions\InvalidBrowserNameException.java
+C:\Users\Lenovo\eclipse-workspace\Rose26A\src\main\java\com\skillio\utils\Locator.java
+C:\Users\Lenovo\eclipse-workspace\Rose26A\src\main\java\com\skillio\utils\PropUtil.java

@@ -1,90 +1,63 @@
 package com.skillio.stepdefinitions;
 
-import static com.skillio.base.Keyword.launchUrl;
-
-import static com.skillio.base.Keyword.openBrowser;
-
 import org.testng.Assert;
 
 import com.skillio.pages.LoginPage;
 import com.skillio.utils.App;
 
-import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 
 public class LoginSteps {
 
-	@Given("Browser is opened and login page is launched")
-	public void openBrowserAndLaunchUrl() {
-		openBrowser(App.getBrowserName()); 
-		launchUrl(App.getappUrl("qa"));
+    private LoginPage login = new LoginPage(); // ✅ reuse object
 
+    @When("user enters invalid credential")
+    public void enterInvalidCredentials() {
+        login.loginWithCredentials("admn", "admn234");
+    }
 
-	}
-	@When("user enters invalid credential")
-	public void enterInvalidCredentials() {
-		LoginPage login = new LoginPage();
-		login.enterUserName("admn");
-		login.enterPassword("admn234");
-		login.clickSignInBtn();
+    @Then("check if the error message appears")
+    public void verifyLoginErrorMsg() {
+        String actual = login.getLoginErrorMessage();
+        Assert.assertEquals(actual, "Invalid credentials");
+    }
 
-	}
-	@Then("check if the error message appears")
-	public void verifyLoginErrorMsg() {
-		LoginPage login =new LoginPage();
-		String expMsg="Invalid credentials";
-		String actualErroMsg =login.getLoginErrorMessage();
-		Assert.assertEquals(actualErroMsg, expMsg, "Error message is invalid: "+actualErroMsg);
+    @When("user enters valid credentials")
+    public void enterValidCredentials() {
+        login.loginWithCredentials(
+            App.getUsername("qa"),
+            App.getPassword("qa")
+        );
+    }
 
-	}
-	
-	
-	// New step: enter valid credentials
-	@When("user enters valid credentials")
-	public void enterValidCredentials() {
-		LoginPage login = new LoginPage();
-		String username = App.getUsername("qa");
-		String password = App.getPassword("qa");
-		login.loginWithCredentials(username, password);
-	}
+    @Then("user should be redirected to the dashboard")
+    public void verifyRedirectionToDashboard() {
+        String header = login.getDashboardHeaderText();
+        Assert.assertTrue(header.toLowerCase().contains("dashboard"));
+    }
 
-	// New step: verify redirection to dashboard
-	@Then("user should be redirected to the dashboard")
-	public void verifyRedirectionToDashboard() {
-		LoginPage login = new LoginPage();
-		String header = login.getDashboardHeaderText();
-		Assert.assertTrue(header != null && header.toLowerCase().contains("dashboard"), "Should land on Dashboard. Actual header: " + header);
-	}
+    @When("user enters username {string} and password {string}")
+    public void user_enters_username_and_password(String username, String password) {
+        login.loginWithCredentials(username, password);
+    }
 
-	// New step: navigate to a specific URL
-	@When("user navigates to {string}")
-	public void user_navigates_to(String url) {
-		launchUrl(url);
-	}
+    @Then("the login result should be {string}")
+    public void the_login_result_should_be(String result) {
 
-	// New step: parameterized login
-	@When("user enters username {string} and password {string}")
-	public void user_enters_username_and_password(String username, String password) {
-		LoginPage login = new LoginPage();
-		login.loginWithCredentials(username, password);
-	}
+        if ("success".equalsIgnoreCase(result)) {
+            Assert.assertTrue(
+                login.getDashboardHeaderText().toLowerCase().contains("dashboard")
+            );
+        } else {
+            String err = login.getLoginErrorMessage();
 
-	// New step: check login result (success/failure)
-	@Then("the login result should be {string}")
-	public void the_login_result_should_be(String result) {
-		LoginPage login = new LoginPage();
-		if ("success".equalsIgnoreCase(result)) {
-			String header = login.getDashboardHeaderText();
-			Assert.assertTrue(header != null && header.toLowerCase().contains("dashboard"), "Expected successful login but dashboard not visible. Actual: " + header);
-		} else {
-			String err = login.getLoginErrorMessage();
-			String userFieldErr = login.getUsernameFieldError();
-			String pwdFieldErr = login.getPasswordFieldError();
-			// At least one indication of failure should be present
-			boolean failureDetected = (err != null && !err.isEmpty()) || (userFieldErr != null && !userFieldErr.isEmpty()) || (pwdFieldErr != null && !pwdFieldErr.isEmpty());
-			Assert.assertTrue(failureDetected, "Expected login failure but no error or validation messages were found.");
-		}
-	}
-
+            Assert.assertTrue(
+                err.equalsIgnoreCase("Invalid credentials")
+                || login.getUsernameFieldError().length() > 0
+                || login.getPasswordFieldError().length() > 0,
+                "Expected failure but no proper validation message found"
+            );
+        }
+    }
 }
