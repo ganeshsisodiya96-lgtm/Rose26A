@@ -4,8 +4,12 @@ import java.time.Duration;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.InvalidSelectorException;
+import org.openqa.selenium.PageLoadStrategy;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.firefox.FirefoxOptions;
 import org.openqa.selenium.remote.RemoteWebDriver;
 
 import com.skillio.exceptions.InvalidBrowserNameException;
@@ -22,32 +26,56 @@ public class Keyword {
         return driver;
     }
 
-    
+    // ✅ OPEN BROWSER (IMPROVED)
     public static void openBrowser(String browserName) {
         RemoteWebDriver driver;
 
         if (browserName.equalsIgnoreCase("chrome")) {
-            driver = new ChromeDriver();
+
+            ChromeOptions options = new ChromeOptions();
+            options.setPageLoadStrategy(PageLoadStrategy.EAGER); // 🔥 faster loading
+            driver = new ChromeDriver(options);
+
         } else if (browserName.equalsIgnoreCase("firefox")) {
-            driver = new FirefoxDriver();
+
+            FirefoxOptions options = new FirefoxOptions();
+            options.setPageLoadStrategy(PageLoadStrategy.EAGER); // 🔥 FIX for timeout
+            driver = new FirefoxDriver(options);
+
         } else {
             throw new InvalidBrowserNameException(browserName);
         }
 
         threadLocal.set(driver);
 
-        
-        
-        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
-        driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(60));
+        driver.manage().window().maximize();
+
+        // ❌ REMOVE implicit wait (important)
+        // driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
+
+        driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(120));
+        driver.manage().timeouts().scriptTimeout(Duration.ofSeconds(30));
     }
 
+    // ✅ LAUNCH URL WITH RETRY (VERY IMPORTANT)
     public static void launchUrl(String url) {
-        getDriver().get(url);
-        System.out.println("Launched Url: " + url);
+        int attempts = 0;
+
+        while (attempts < 3) {
+            try {
+                getDriver().get(url);
+                System.out.println("Launched URL: " + url);
+                return;
+            } catch (Exception e) {
+                attempts++;
+                System.out.println("Retrying URL... Attempt: " + attempts);
+            }
+        }
+
+        throw new RuntimeException("Failed to load URL after 3 attempts");
     }
 
-    
+    // ✅ ACTION METHODS
     public static void enterText(String locatorType, String locatorValue, String text) {
         getElement(locatorType, locatorValue).sendKeys(text);
     }
@@ -56,7 +84,8 @@ public class Keyword {
         getElement(locatorType, locatorValue).click();
     }
 
-    private static org.openqa.selenium.WebElement getElement(String type, String value) {
+    // ✅ ELEMENT HANDLING
+    private static WebElement getElement(String type, String value) {
         RemoteWebDriver driver = getDriver();
 
         switch (type.toLowerCase()) {
@@ -72,7 +101,7 @@ public class Keyword {
         }
     }
 
-   
+    // ✅ QUIT BROWSER SAFELY
     public static void quitBrowser() {
         RemoteWebDriver driver = threadLocal.get();
 
@@ -87,7 +116,7 @@ public class Keyword {
         } catch (Exception e) {
             System.err.println("Error while quitting: " + e.getMessage());
         } finally {
-            threadLocal.remove(); 
+            threadLocal.remove();
         }
     }
 }
