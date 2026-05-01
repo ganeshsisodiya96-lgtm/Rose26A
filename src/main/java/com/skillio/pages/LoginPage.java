@@ -67,6 +67,15 @@ public class LoginPage {
         return loginError.getText();
     }
 
+    public boolean isLoginErrorVisible() {
+        try {
+            WaitFor.elementToBeVisible(loginError);
+            return loginError.isDisplayed();
+        } catch (Exception e) {
+            return false;
+        }
+    }
+
     public String getDashboardHeaderText() {
         WaitFor.elementToBeVisible(dashboardHeader);
         return dashboardHeader.getText();

@@ -3,6 +3,7 @@ package com.skillio.pages;
 import java.time.Duration;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -37,16 +38,22 @@ public class PimPage {
     @FindBy(xpath = "//input[@name='lastName']")
     private WebElement lastName;
 
-    @FindBy(xpath = "//input[@name='employeeId']")
+    @FindBy(xpath = "//label[normalize-space()='Employee Id']/following::input[1]")
     private WebElement empId;
 
     @FindBy(xpath = "//button[@type='submit']")
     private WebElement saveBtn;
 
+    @FindBy(xpath = "//button[normalize-space()='Search']")
+    private WebElement searchBtn;
+
+    @FindBy(xpath = "//input[@placeholder='Type for hints...']")
+    private WebElement employeeSearchInput;
+
     @FindBy(css = ".oxd-toast-content-text")
     private WebElement successToast;
 
-    @FindBy(xpath = "//span[text()='Already exists']")
+    @FindBy(xpath = "//span[contains(text(),'Already exists') or contains(text(),'already exists')]")
     private WebElement duplicateIdError;
 
     @FindBy(xpath = "//span[text()='Required']")
@@ -101,7 +108,18 @@ public class PimPage {
     }
 
     public void clickSave() {
-        waitForClickability(saveBtn).click();
+        // Wait for the OrangeHRM form-loader spinner to disappear first
+        try {
+            wait.until(ExpectedConditions.invisibilityOfElementLocated(
+                By.className("oxd-form-loader")));
+        } catch (Exception ignored) {}
+        // Use JavaScript click to bypass any residual overlay
+        waitForClickability(saveBtn);
+        ((JavascriptExecutor) driver).executeScript("arguments[0].click();", saveBtn);
+    }
+
+    public void clickSearch() {
+        waitForClickability(searchBtn).click();
     }
 
     public void clearNameFields() {
@@ -138,7 +156,12 @@ public class PimPage {
 
     public boolean isDuplicateIdErrorDisplayed() {
         try {
-            return waitForVisibility(duplicateIdError).isDisplayed();
+            By errorLocator = By.xpath(
+                "//span[contains(text(),'Already exists') or contains(text(),'already exists')]");
+            WebDriverWait longWait = new WebDriverWait(driver, Duration.ofSeconds(20));
+            longWait.until(org.openqa.selenium.support.ui.ExpectedConditions
+                .visibilityOfElementLocated(errorLocator));
+            return driver.findElement(errorLocator).isDisplayed();
         } catch (Exception e) {
             return false;
         }
@@ -153,7 +176,8 @@ public class PimPage {
     }
 
 	public void searchEmployee(String name) {
-		// TODO Auto-generated method stub
-		
+		waitForVisibility(employeeSearchInput);
+		employeeSearchInput.clear();
+		employeeSearchInput.sendKeys(name);
 	}
 }

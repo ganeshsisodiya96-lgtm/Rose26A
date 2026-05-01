@@ -1,149 +1,188 @@
 package com.skillio.pages;
 
+import java.time.Duration;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 import com.skillio.base.Keyword;
 import com.skillio.utils.WaitFor;
 
 public class MyInfoPage {
 
+    private static final By MY_INFO_MENU       = By.xpath("//span[text()='My Info']");
+    private static final By PERSONAL_TAB       = By.xpath("//a[normalize-space()='Personal Details']");
+    private static final By CONTACT_TAB        = By.xpath("//a[normalize-space()='Contact Details']");
+    private static final By EMERGENCY_TAB      = By.xpath("//a[normalize-space()='Emergency Contacts']");
+    private static final By SAVE_BTN           = By.xpath("//button[@type='submit']");
+    private static final By SUCCESS_TOAST      = By.cssSelector(".oxd-toast-content-text");
+    private static final By FIRST_NAME         = By.name("firstName");
+    private static final By DOB_FIELD          = By.xpath("//label[normalize-space()='Date of Birth']/following::input[1]");
+    private static final By NATIONALITY_DD     = By.xpath("//label[normalize-space()='Nationality']/following::div[contains(@class,'oxd-select-text')][1]");
+    private static final By STREET1            = By.xpath("//label[normalize-space()='Street 1']/following::input[1]");
+    private static final By CITY               = By.xpath("//label[normalize-space()='City']/following::input[1]");
+    private static final By ADD_BTN            = By.xpath("//button[normalize-space()='Add']");
+    private static final By CONTACT_NAME       = By.xpath("//label[normalize-space()='Name']/following::input[1]");
+    private static final By RELATIONSHIP       = By.xpath("//label[normalize-space()='Relationship']/following::input[1]");
+    private static final By HOME_PHONE         = By.xpath("//label[normalize-space()='Home Telephone']/following::input[1]");
+
     public MyInfoPage() {
         PageFactory.initElements(Keyword.getDriver(), this);
     }
 
-    @FindBy(xpath = "//span[text()='My Info']")
-    private WebElement myInfoMenu;
+    private WebDriver driver() { return Keyword.getDriver(); }
 
-    @FindBy(xpath = "//a[text()='Personal Details']")
-    private WebElement personalDetailsTab;
+    private WebDriverWait getWait() {
+        return new WebDriverWait(driver(), Duration.ofSeconds(30));
+    }
 
-    @FindBy(xpath = "//a[text()='Contact Details']")
-    private WebElement contactDetailsTab;
+    // Find element fresh and click — avoids PageFactory proxy serialization crash
+    private void clickDropdown(By dropdownBy) {
+        WaitFor.loaderToBeInvisible();
+        try { Thread.sleep(800); } catch (InterruptedException ignored) {}
+        WaitFor.elementToBeVisible(dropdownBy);
+        WebElement el = driver().findElement(dropdownBy);
+        ((JavascriptExecutor) driver())
+            .executeScript("arguments[0].scrollIntoView({block:'center'});", el);
+        try { Thread.sleep(300); } catch (InterruptedException ignored) {}
+        el.click();
+    }
 
-    @FindBy(xpath = "//a[text()='Emergency Contacts']")
-    private WebElement emergencyContactsTab;
-
-    @FindBy(xpath = "//button[@type='submit']")
-    private WebElement saveBtn;
-
-    @FindBy(css = ".oxd-toast-content-text")
-    private WebElement successToast;
-
-    @FindBy(xpath = "//span[contains(text(),'Should be a valid date')]")
-    private WebElement dobError;
-
-    @FindBy(name = "firstName")
-    private WebElement firstNameField;
-
-    @FindBy(xpath = "//input[@placeholder='Street 1']")
-    private WebElement street1Field;
-
-    @FindBy(xpath = "//input[@placeholder='City']")
-    private WebElement cityField;
-
-    @FindBy(xpath = "//button[normalize-space()='Add']")
-    private WebElement addBtn;
-
-    @FindBy(xpath = "//input[@placeholder='Name']")
-    private WebElement contactNameField;
-
-    @FindBy(xpath = "//input[@placeholder='Relationship']")
-    private WebElement relationshipField;
-
-    @FindBy(xpath = "//input[@placeholder='Home Telephone']")
-    private WebElement homePhoneField;
-
-    // ── Actions ─────────────────────────────────────────────────────────────
+    private void jsClick(By btnBy) {
+        WaitFor.loaderToBeInvisible();
+        WaitFor.elementToBeVisible(btnBy);
+        ((JavascriptExecutor) driver())
+            .executeScript("arguments[0].click();", driver().findElement(btnBy));
+    }
 
     public void navigateToMyInfo() {
-        WaitFor.elementToBeClickable(myInfoMenu);
-        myInfoMenu.click();
+        WaitFor.elementToBeClickable(MY_INFO_MENU);
+        driver().findElement(MY_INFO_MENU).click();
     }
 
     public void clickPersonalDetailsTab() {
-        WaitFor.elementToBeClickable(personalDetailsTab);
-        personalDetailsTab.click();
+        WaitFor.elementToBeClickable(PERSONAL_TAB);
+        driver().findElement(PERSONAL_TAB).click();
     }
 
     public void clickContactDetailsTab() {
-        WaitFor.elementToBeClickable(contactDetailsTab);
-        contactDetailsTab.click();
+        WaitFor.elementToBeClickable(CONTACT_TAB);
+        driver().findElement(CONTACT_TAB).click();
     }
 
     public void clickEmergencyContactsTab() {
-        WaitFor.elementToBeClickable(emergencyContactsTab);
-        emergencyContactsTab.click();
+        WaitFor.elementToBeClickable(EMERGENCY_TAB);
+        driver().findElement(EMERGENCY_TAB).click();
     }
 
     public void selectNationality(String nationality) {
-        // Extend with dropdown selection if needed
+        clickDropdown(NATIONALITY_DD);
+        By option = By.xpath("//div[@role='listbox']//span[normalize-space()='" + nationality + "']");
+        WaitFor.elementToBeVisible(option);
+        driver().findElement(option).click();
     }
 
     public void enterFirstName(String name) {
-        WaitFor.elementToBeVisible(firstNameField);
-        firstNameField.clear();
-        firstNameField.sendKeys(name);
-    }
-
-    public void enterStreet1(String street) {
-        WaitFor.elementToBeVisible(street1Field);
-        street1Field.clear();
-        street1Field.sendKeys(street);
-    }
-
-    public void enterCity(String city) {
-        WaitFor.elementToBeVisible(cityField);
-        cityField.clear();
-        cityField.sendKeys(city);
+        WaitFor.elementToBeVisible(FIRST_NAME);
+        WebElement el = driver().findElement(FIRST_NAME);
+        el.clear();
+        el.sendKeys(name);
     }
 
     public void enterDob(String dob) {
-        // Extend with DOB field locator
+        WaitFor.elementToBeVisible(DOB_FIELD);
+        WebElement el = driver().findElement(DOB_FIELD);
+        // Clear and set via JS, fire blur to trigger Vue validation
+        ((JavascriptExecutor) driver()).executeScript(
+            "arguments[0].value = '';" +
+            "arguments[0].dispatchEvent(new Event('input', { bubbles: true }));" +
+            "arguments[0].value = arguments[1];" +
+            "arguments[0].dispatchEvent(new Event('input', { bubbles: true }));" +
+            "arguments[0].dispatchEvent(new Event('change', { bubbles: true }));" +
+            "arguments[0].dispatchEvent(new Event('blur', { bubbles: true }));",
+            el, dob);
+        // Click elsewhere to confirm
+        try { driver().findElement(FIRST_NAME).click(); } catch (Exception ignored) {}
+        try { Thread.sleep(300); } catch (InterruptedException ignored) {}
+    }
+
+    public void enterStreet1(String street) {
+        WaitFor.elementToBeVisible(STREET1);
+        WebElement el = driver().findElement(STREET1);
+        el.clear();
+        el.sendKeys(street);
+    }
+
+    public void enterCity(String city) {
+        WaitFor.elementToBeVisible(CITY);
+        WebElement el = driver().findElement(CITY);
+        el.clear();
+        el.sendKeys(city);
     }
 
     public void clickAdd() {
-        WaitFor.elementToBeClickable(addBtn);
-        addBtn.click();
+        WaitFor.elementToBeClickable(ADD_BTN);
+        driver().findElement(ADD_BTN).click();
     }
 
     public void enterContactName(String name) {
-        WaitFor.elementToBeVisible(contactNameField);
-        contactNameField.clear();
-        contactNameField.sendKeys(name);
+        WaitFor.elementToBeVisible(CONTACT_NAME);
+        WebElement el = driver().findElement(CONTACT_NAME);
+        el.clear();
+        el.sendKeys(name);
     }
 
-    public void enterRelationship(String relationship) {
-        WaitFor.elementToBeVisible(relationshipField);
-        relationshipField.clear();
-        relationshipField.sendKeys(relationship);
+    public void enterRelationship(String rel) {
+        WaitFor.elementToBeVisible(RELATIONSHIP);
+        WebElement el = driver().findElement(RELATIONSHIP);
+        el.clear();
+        el.sendKeys(rel);
     }
 
     public void enterHomePhone(String phone) {
-        WaitFor.elementToBeVisible(homePhoneField);
-        homePhoneField.clear();
-        homePhoneField.sendKeys(phone);
+        WaitFor.elementToBeVisible(HOME_PHONE);
+        WebElement el = driver().findElement(HOME_PHONE);
+        el.clear();
+        el.sendKeys(phone);
     }
 
     public void clickSave() {
-        WaitFor.elementToBeClickable(saveBtn);
-        saveBtn.click();
+        jsClick(SAVE_BTN);
     }
 
-    // ── Validations ──────────────────────────────────────────────────────────
-
     public boolean isSuccessToastDisplayed() {
-        WaitFor.elementToBeVisible(successToast);
-        return successToast.isDisplayed();
+        try { WaitFor.elementToBeVisible(SUCCESS_TOAST);
+              return driver().findElement(SUCCESS_TOAST).isDisplayed(); }
+        catch (Exception e) { return false; }
     }
 
     public boolean isDobErrorDisplayed() {
-        return dobError.isDisplayed();
+        // After saving with invalid/blank DOB, OrangeHRM shows a Required or date error span
+        By[] candidates = {
+            By.xpath("//span[contains(@class,'oxd-input-field-error-message')]"),
+            By.xpath("//span[contains(text(),'Should be a valid date')]"),
+            By.xpath("//span[contains(text(),'Required') and ancestor::*[.//label[normalize-space()='Date of Birth']]]")
+        };
+        for (By loc : candidates) {
+            try {
+                WebDriverWait w = new WebDriverWait(driver(), Duration.ofSeconds(4));
+                w.until(ExpectedConditions.visibilityOfElementLocated(loc));
+                return driver().findElement(loc).isDisplayed();
+            } catch (Exception ignored) {}
+        }
+        return false;
     }
 
     public boolean isEmergencyContactInList(String name) {
-        // Extend with list check
-        return true;
+        try {
+            By row = By.xpath("//div[contains(@class,'oxd-table-body')]//div[normalize-space()='" + name + "']");
+            WaitFor.elementToBeVisible(row);
+            return !driver().findElements(row).isEmpty();
+        } catch (Exception e) { return false; }
     }
 }

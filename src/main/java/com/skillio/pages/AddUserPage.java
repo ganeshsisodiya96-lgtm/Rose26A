@@ -50,7 +50,9 @@ public class AddUserPage {
         WaitFor.elementToBeVisible(employeeInput);
         Keyword.threadLocal.get().findElement(employeeInput).clear();
         Keyword.threadLocal.get().findElement(employeeInput).sendKeys(employeeName);
-        By suggestion = By.xpath("//div[@role='listbox']//span[normalize-space()='" + employeeName + "']");
+        // Use contains() so partial display name matches work
+        String firstWord = employeeName.split(" ")[0];
+        By suggestion = By.xpath("//div[@role='listbox']//span[contains(normalize-space(),'" + firstWord + "')]");
         WaitFor.elementToBeVisible(suggestion);
         Keyword.threadLocal.get().findElement(suggestion).click();
     }

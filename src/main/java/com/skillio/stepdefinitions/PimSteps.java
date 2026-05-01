@@ -69,7 +69,7 @@ public class PimSteps {
 
     @When("user clicks Search button")
     public void userClicksSearchButton() {
-        pim.clickSave();
+        pim.clickSearch();
     }
 
     @When("user searches for employee {string}")
@@ -101,6 +101,8 @@ public class PimSteps {
 
     @Then("error message {string} should be displayed")
     public void errorMessageShouldBeDisplayed(String message) {
+        // OrangeHRM shows "Already exists" as an inline span under the Employee ID field
+        // after attempting to save a duplicate ID
         Assert.assertTrue(pim.isDuplicateIdErrorDisplayed(),
             "Expected error: " + message);
     }

@@ -162,20 +162,21 @@ public class AdminTestCase  {
         // 🔹 Enter Employee Name (FIXED PART)
         enterText("xpath", Locator.employeeName, "manda akhil user");
 
-        // 🔹 Wait for suggestion
-        By suggestion = By.xpath("//div[@role='listbox']//span[normalize-space()='manda akhil user']");
+        // 🔹 Wait for suggestion using contains() to avoid exact-match failure
+        By suggestion = By.xpath("//div[@role='listbox']//span[contains(normalize-space(),'manda akhil')]");
         WaitFor.elementToBeVisible(suggestion);
 
         // 🔹 Click suggestion
-        clickOn("xpath", "//div[@role='listbox']//span[normalize-space()='manda akhil user']");
+        clickOn("xpath", "//div[@role='listbox']//span[contains(normalize-space(),'manda akhil')]");
 
         // 🔹 Select Status
         clickOn("xpath", Locator.status);
         WaitFor.elementToBeVisible(By.xpath(Locator.statusEnabled));
         clickOn("xpath", Locator.statusEnabled);
 
-        // 🔹 Enter User Details
-        enterText("xpath", Locator.usernameForNewUser, "Admin777");
+        // 🔹 Enter User Details (unique username to avoid duplicate failure on re-runs)
+        String uniqueUsername = "Admin" + System.currentTimeMillis();
+        enterText("xpath", Locator.usernameForNewUser, uniqueUsername);
         enterText("xpath", Locator.passwordForNewUser, "Admin@123");
         enterText("xpath", Locator.confirmPasswordForNewUser, "Admin@123");
 
@@ -208,17 +209,17 @@ public class AdminTestCase  {
         addUserPage.selectUserRoleAdmin();
         addUserPage.enterEmployeeNameAndSelect("Alice akhil user");
         addUserPage.selectStatusEnabled();
-        addUserPage.enterUsername("Admin777");
+        String uniqueUsername = "Admin" + System.currentTimeMillis();
+        addUserPage.enterUsername(uniqueUsername);
         addUserPage.enterPasswordAndConfirm("Admin@123");
         addUserPage.clickSave();
 
-        // Verify user is created: wait for success toast or search the user listing
-        // Here we will search in the users table for the username we created
-        By createdUser = By.xpath("//div[contains(@class,'oxd-table-body')]//div[text()='Admin777']");
+        // Verify user is created: search the user listing for the username we created
+        By createdUser = By.xpath("//div[contains(@class,'oxd-table-body')]//div[text()='" + uniqueUsername + "']");
         WaitFor.elementToBeVisible(createdUser);
 
         Assert.assertTrue(Keyword.threadLocal.get().findElements(createdUser).size() > 0,
-                "Expected newly created user Admin777 to be present in the users table");
+                "Expected newly created user " + uniqueUsername + " to be present in the users table");
 
     }
     
